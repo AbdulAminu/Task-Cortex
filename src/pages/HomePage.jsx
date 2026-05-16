@@ -1,7 +1,7 @@
 import NavBar from "../components/NavBar.jsx";
 import { Smile, Diamond } from "lucide-react";
 import { Link } from "react-router-dom";
-
+import backVid from "../assets/backVid.mp4";
 <Smile color="black" />
 export function HomePage()  {
   return (
@@ -9,7 +9,7 @@ export function HomePage()  {
       <NavBar />
      <div className="video-container">
       <video autoPlay loop muted playsInline className="bg-video">
-        <source src="src/assets/278750_medium.mp4" type="video/mp4" />
+        <source src={backVid} type="video/mp4" />
       </video>
 
       <div className="content">

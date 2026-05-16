@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import LogOutBtn from "../components/LogOutBtn";
 import { api } from "../API/api";
-
 function TodoList() {
   const [tasks, setTasks] = useState([]);
   const [newTask, setNewTask] = useState("");
