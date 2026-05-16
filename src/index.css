@@ -1,0 +1,835 @@
+@import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Dancing+Script:wght@400..700&family=Lobster&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap");
+@import "tailwindcss";
+
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.imgA {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 10px;
+  border: 1px solid gray;
+}
+
+.Log {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.heading {
+  font-weight: 700;
+  font-family: "Merriweather", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-size: clamp(1rem, 3vw, 1.5rem);
+  color: white;
+}
+
+nav {
+  background: #1a261a;
+background: linear-gradient(297deg, rgba(26, 38, 26, 1) 0%, rgba(46, 46, 46, 1) 67%);
+  height: auto;
+  min-height: 5rem;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  box-shadow: 0px 23px 9px -7px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px 23px 9px -7px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 23px 9px -7px rgba(0, 0, 0, 0.75);
+  position: fixed;
+  z-index: 9999;
+  border: 2px solid rgba(148, 145, 145, 0.582);
+  top: 0;
+  width: 100%;
+}
+
+.NavLst {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-family: "Merriweather", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-size: clamp(0.85rem, 2.5vw, 1.3rem);
+}
+
+body {
+  background: linear-gradient(135deg, #0f0f0f, #1c1c1c, #2a2a2a, #3a3a3a);
+  min-height: 100vh;
+  
+}
+
+
+.video-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  box-shadow: 0px 23px 9px -7px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px 23px 9px -7px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 23px 9px -7px rgba(0, 0, 0, 0.75);
+}
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 35rem;
+  object-fit: cover;
+  box-shadow: 0px 23px 9px -7px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px 23px 9px -7px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 23px 9px -7px rgba(0, 0, 0, 0.75);
+}
+
+.content {
+  position: relative;
+  color: white;
+  padding: clamp(1rem, 4vw, 3rem);
+  margin-top: 8rem;
+  z-index: 1;
+}
+
+.smile {
+  height: clamp(2.5rem, 6vw, 5rem);
+  width: clamp(2.5rem, 6vw, 5rem);
+}
+
+.content h1 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: "Merriweather", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.hed {
+  font-size: clamp(1.8rem, 5vw, 4rem);
+  display: flex;
+  align-items: center;
+}
+
+.hh {
+  font-size: clamp(2.5rem, 8vw, 6rem);
+  font-family: "Merriweather", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.sub {
+  font-size: clamp(1.2rem, 3vw, 2rem);
+  font-family: "Merriweather", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.subm {
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.buttonA {
+  color: white;
+  padding: clamp(0.8rem, 2vw, 2rem);
+  border-radius: 10px;
+  font-size: clamp(1rem, 2vw, 1.3rem);
+ background: #2b3625;
+background: linear-gradient(297deg, rgba(43, 54, 37, 1) 0%, rgba(0, 0, 0, 1) 68%);
+  border: 2px solid #3a3a3a;
+  width: min(20rem, 90%);
+  box-shadow: 0px 2px 29px 9px rgba(0,0,0,0.94);
+-webkit-box-shadow: 0px 2px 29px 9px rgba(0,0,0,0.94);
+-moz-box-shadow: 0px 2px 29px 9px rgba(0,0,0,0.94);
+  transition: transform 0.2s ease-in-out;
+  font-family: "Merriweather", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.buttonA:hover {
+  transform: scale(1.05);
+}
+
+.buttonb {
+  color: white;
+  padding: clamp(0.8rem, 2vw, 2rem);
+  border-radius: 10px;
+  font-size: clamp(1rem, 2vw, 1.3rem);
+  background: #2b3625;
+background: linear-gradient(297deg, rgba(43, 54, 37, 1) 0%, rgba(0, 0, 0, 1) 68%);
+  border: 2px solid #3a3a3a;
+  width: min(20rem, 90%);
+  box-shadow: 0px 2px 29px 9px rgba(0,0,0,0.94);
+-webkit-box-shadow: 0px 2px 29px 9px rgba(0,0,0,0.94);
+-moz-box-shadow: 0px 2px 29px 9px rgba(0,0,0,0.94);
+  transition: transform 0.2s ease-in-out;
+  font-family: "Merriweather", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.buttonb:hover {
+  transform: scale(1.05);
+}
+
+.btn-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+hr {
+  width: 2px;
+  height: 2rem;
+  background: rgba(255, 255, 255, 0.3);
+  border: none;
+  margin: 0;
+}
+@media(min-width: 450px) and (max-width:550px){
+  .video-container{
+    height: 31rem;
+  }
+  .buttonA,.buttonb{
+    width: 14rem;
+  }
+  .btn-container{
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+  }
+  .hed{
+    font-size: 4rem;
+  }
+  .hh{
+    font-size: 2.5rem;
+    margin-top: 10px;
+  }
+  .sub{
+    margin-top: 9px;
+  }
+  .subm{
+    font-size: 1.5rem;
+    margin-top: 10px;
+  }
+  .bg-video{
+    height: 30rem;
+  }
+}
+@media(min-width: 551px) and (max-width:670px){
+  .video-container{
+    min-height: 30rem;
+  }
+  .buttonA,.buttonb{
+    width: 14rem;
+  }
+  .bg-video{
+    min-height: 33rem;
+  }
+  .btn-container{
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+  }
+  .hed{
+    font-size: 3.5rem;
+  }
+  .hh{
+    font-size: 3rem;
+    margin-top: 10px;
+  }
+  .sub{
+    margin-top: 9px;
+    font-size: 1.3rem;
+  }
+  .subm{
+    font-size: 1.5rem;
+    margin-top: 10px;
+  }
+}
+@media(min-width: 671px) and (max-width:800px){
+  .video-container{
+    min-height: 30rem;
+  }
+  .bg-video{
+    min-height: 33rem;
+  }
+  .buttonA,.buttonb{
+    width: 17rem;
+  }
+  .hed{
+    font-size: 4rem;
+  }
+  .hh{
+    font-size: 3.5rem;
+  }
+  .sub{
+    font-size: 1.5rem;
+  }
+  .subm{
+    font-size: 1.7rem;
+    margin-top: 9px;
+  }
+  .btn-container{
+    padding-top: 1.4rem;
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+  }
+}
+@media(min-width: 801px) and (max-width:1000px){
+  .video-container{
+    min-height: 29rem;
+  }
+  .buttonA,.buttonb{
+    width: 17rem;
+  }
+  .hed{
+    font-size: 5rem;
+  }
+  .hh{
+    font-size: 4rem;
+  }
+  .sub{
+    font-size: 1.6rem;
+    margin-top: 9px;
+  }
+  .subm{
+    font-size: 1.6rem;
+    margin-top: 9px;
+  }
+  .btn-container{
+    margin: 2rem;
+  }
+}
+.active{
+  background-color: rgba(17, 17, 17, 0.735);
+ border: 2px solid #4e4d4d;
+ box-shadow: 0px 2px 29px -2px rgba(0,0,0,0.94);
+-webkit-box-shadow: 0px 2px 29px -2px rgba(0,0,0,0.94);
+-moz-box-shadow: 0px 2px 29px -2px rgba(0,0,0,0.94);
+z-index: 1000;
+}
+nav ul li a {
+  padding: 0.5rem;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+  display: inline-block;
+}
+nav ul li a:not(.active):hover{
+  transform: scale(1.05);
+}
+.menu{
+  display: none;
+  position: absolute;
+  top: 0.75rem;
+  right: 0.5rem;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 2.25rem;
+  height: 2rem;
+  margin-top: 5px;
+}
+.menu span{
+  height: 0.4rem;
+  background-color: rgba(19, 19, 19, 0.63);
+  border: 2px solid rgb(197, 190, 190);
+  width: 100%;
+  border-radius:0.2rem ;
+  
+}
+@media (max-width: 550px){
+
+  .menu{
+    display: flex;
+  }
+
+  nav{
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .NavLst{
+    display: none;
+    flex-direction: column;
+    margin-bottom: 0.25rem;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    width: 250px;
+    background: #222;
+    padding: 60px 20px;
+    transition: 2s ease;
+    justify-content: flex-start;
+  }
+
+  .NavLst.active{
+    display: flex;   
+    right: 0;       
+  }
+
+  nav ul li{
+    width: 100%;
+    text-align: center;
+  }
+
+  nav ul li a{
+    margin: 0.2rem 0.5rem;
+  }
+
+}
+@media(min-width:290px) and (max-width:449px){
+  .video-container{
+    min-height: 28rem;
+  }
+  .content{
+    padding-top: 2rem;
+  }
+  .buttonA,.buttonb{
+    width: 14rem;
+  }
+  .hh{
+    font-size: 3rem;
+    margin-top: 10px;
+  }
+  .sub{
+    margin-top: 9px;
+    font-size: 1.2rem;
+  }
+  .subm{
+    font-size: 1rem;
+    margin-top: 10px;
+  }
+  .hed{
+    font-size: 2.5rem;
+  }
+}
+.about-card{
+  height: auto;
+  width: 80%;
+  background-color: #a5a5a5;
+  padding: 1rem;
+  box-shadow: 0px 2px 54px 23px rgba(0,0,0,0.94);
+-webkit-box-shadow: 0px 2px 54px 23px rgba(0,0,0,0.94);
+-moz-box-shadow: 0px 2px 54px 23px rgba(0,0,0,0.94);
+border-radius: 1.5rem;
+margin: auto;
+}
+.about-container{
+  padding-top: 7rem;
+}
+
+.contt{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Diamond-cont{
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0px 2px 54px 23px rgba(0,0,0,0.94);
+-webkit-box-shadow: 0px 2px 54px 23px rgba(0,0,0,0.94);
+-moz-box-shadow: 0px 2px 54px 23px rgba(0,0,0,0.94);
+border-radius: 1.5rem;
+}
+.Diamond{
+  height: 3rem;
+  padding: auto;
+}
+.about-title{
+  text-align: center;
+  font-size: 1.7rem;
+  font-weight: 700;
+  font-family: "Merriweather", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-size: clamp(1.2rem, 2.7vw, 1.7rem);
+}
+.about-subtitle{
+  text-align: center;
+  font-size: 1.7rem;
+  font-family: "Merriweather", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-size: clamp(1.2rem, 2.7vw, 1.7rem);
+  font-weight: 700;
+}
+.about-list{
+  text-align: center;
+ font-family: "Merriweather", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-size: clamp(0.85rem, 2.5vw, 1rem);
+
+}
+.about-text{
+  font-family: "Merriweather", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-size: clamp(0.85rem, 2.5vw, 1rem);
+}
+.video-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+
+.video-container::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 180px; 
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(15, 15, 15, 0.4) 40%,
+    rgba(15, 15, 15, 0.8) 70%,
+    rgba(15, 15, 15, 1) 100%
+  );
+  pointer-events: none;
+  z-index: 2;
+}
+.head{
+ text-align: center;
+ box-shadow: 0px 2px 34px 3px rgba(0,0,0,0.94);
+-webkit-box-shadow: 0px 2px 34px 3px rgba(0,0,0,0.94);
+-moz-box-shadow: 0px 2px 34px 3px rgba(0,0,0,0.94);
+border-radius: 9px;
+background-color: #727272;
+}
+.Triangle{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.inp{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 1.7rem;
+  gap: 9px;
+  
+}
+.td-list{
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+}
+.cont{
+  background-color: #a5a5a5;
+  height: auto;
+  padding: 2rem;
+  width: auto;
+  border-radius: 1rem;
+ box-shadow: 0px 2px 30px 10px rgba(0,0,0,0.7);
+-webkit-box-shadow: 0px 2px 54px 37px rgba(0,0,0,0.94);
+-moz-box-shadow: 0px 2px 54px 37px rgba(0,0,0,0.94);
+position: relative;
+  z-index: 2;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(15, 15, 15, 0.4) 40%,
+    rgba(15, 15, 15, 0.8) 70%,
+    rgba(15, 15, 15, 1) 100%
+  );
+  max-width: 100%;
+}
+.hb {
+  font-size: clamp(1.5rem, 6vw, 3rem);
+  font-weight: 700;
+  font-family: "Merriweather", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+.inpa {
+  background-color: black;
+  color: white;
+  padding: clamp(3px, 2vw, 10px);
+  border-radius: 7px;
+  width: clamp(60px, 50vw, 300px);
+  font-size: clamp(0.8rem, 2.5vw, 1rem);
+}
+.btna{
+  background-color: rgb(17, 32, 17);
+  color: white;
+  padding: 7px;
+  border: 2px solid #4e4d4d;
+  border-radius: 5px;
+  transition: transform 0.3s ease-in-out;
+  font-size: clamp(0.1rem, 1.5vw, 0.8rem);
+}
+.lst{
+  text-align: center;
+  padding: 1rem;
+  color: #727272;
+  font-size: clamp(0.85rem, 2.5vw, 1.3rem);
+  font-family: "Merriweather", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: 500;
+  gap: 5px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+/* .lst li{
+  padding: 0.3rem;
+  background-color: rgb(31, 30, 30);
+  margin-bottom: 10px;
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
+  min-width: 280px;
+  justify-content: space-between;
+} */
+ .lst li{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  background-color: rgb(31, 30, 30);
+  border-radius: 7px;
+  gap: 0.8rem;
+  box-shadow: 0px 2px 34px 3px rgba(0,0,0,0.94);
+-webkit-box-shadow: 0px 2px 34px 3px rgba(0,0,0,0.94);
+-moz-box-shadow: 0px 2px 34px 3px rgba(0,0,0,0.94);
+border-radius: 9px;
+font-size: clamp(0.3rem, 2vw, 1rem);
+overflow-x: auto;
+white-space: nowrap;
+  max-width: 100%;
+}
+.dlt{
+  background-color: #1c2512;
+  font-size: clamp(0.3rem, 1.5vw, 0.8rem);
+  border-radius: 6px;
+  padding: 7px;
+  color: white;
+border: 2px solid #4e4d4d;
+transition: transform 0.3s ease-in-out;
+}
+.mvup{
+  background-color:  #252724;
+  font-size: clamp(0.3rem, 1.5vw, 0.8rem);
+  border-radius: 6px;
+  padding: 7px;
+  color: white;
+border: 2px solid #4e4d4d;
+transition: transform 0.3s ease-in-out;
+}
+.mvud{
+  background-color:  #0a0a0a;
+  font-size: clamp(0.3rem, 1.5vw, 0.8rem);
+  border-radius: 6px;
+  padding: 7px;
+  color: white;
+border: 2px solid #4e4d4d;
+transition: transform 0.3s ease-in-out;
+}
+.dlt:hover,
+.btna:hover,
+.mvud:hover,
+.mvup:hover {
+  transform: scale(1.05);
+}
+*{
+  margin: 0;
+}
+@media(max-width:480px){
+  .inpa{
+    padding: 6px;
+    font-size: 0.9rem;
+  }
+  .lst li{
+    gap: 2px;
+  }
+  .dlt,
+.btna,
+.mvud,
+.mvup{
+  padding: 3px;
+}
+.td-list{
+  padding-top: 2rem;
+}
+}
+.lgout{
+  background-color: rgb(4, 36, 4);
+  padding: 9px;
+  border-radius: 0.6rem;
+  color: #e5c5c5;
+  box-shadow: 0px 2px 34px 3px rgba(0,0,0,0.94);
+  font-size: clamp(0.45rem, 1vw, 0.8rem);
+  font-family: "Merriweather", serif;
+  font-weight: 500;
+  transition: transform 0.4s ease-in-out;
+  border: 2px solid rgb(161, 161, 161);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+  .lg{
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 3000;
+}
+.lgout:hover{
+  transform: scale(1.09);
+
+}
+.ddlt{
+  background-color: rgb(52, 13, 13);
+  padding: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 2px 34px 3px rgba(0,0,0,0.94);
+  font-size: clamp(0.45rem, 1vw, 0.8rem);
+  font-family: "Merriweather", serif;
+  font-weight: 500;
+  border-radius: 0.6rem;
+  border: 2px solid rgb(161, 161, 161);
+  color: #e5c5c5;
+  transition: transform 0.4s ease-in-out;
+}
+.ddlt:hover{
+  transform: translate(10px, 5px);
+}
+.dltt{
+  display: flex;
+  justify-content: flex-start;
+  position: fixed;
+  z-index: 3000;
+  top: 1rem;
+  left: 1rem;
+  }
+
+  .form-cont {
+  background-color: #0a0a0a;
+  padding: 2rem;
+  border-radius: 1rem;
+  width: 100%;
+  max-width: min(28rem, 90vw);
+  box-shadow: 0px 2px 35px 29px rgba(0,0,0,0.94);
+-webkit-box-shadow: 0px 2px 35px 29px rgba(0,0,0,0.94);
+-moz-box-shadow: 0px 2px 35px 29px rgba(0,0,0,0.94);
+}
+.form-cont input {
+  padding: 0.2rem;
+  margin-top: 1rem;
+  font-family: "Merriweather", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+.form-cont form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  font-family: "Merriweather", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+.form-cont h2{
+  margin: 1rem;
+  font-family: "Merriweather", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+.form-cont button{
+  padding: 0.4rem;
+  font-family: "Merriweather", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+.form-cont p{
+  font-family: "Merriweather", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  padding-top: 0.4rem;
+}
+.btn-container a {
+  display: flex;
+  justify-content: center;
+}
+.buttonA,
+.buttonb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  
+}
+.custom-loader {
+  width: 50px;
+  height: 50px;
+  display: grid;
+  border-radius: 50%;
+  background: conic-gradient(#000000 25%,#E4E4ED 0 50%,#6F6D91 0 75%,#000000 0);
+  animation: s2 2s infinite linear;
+}
+.custom-loader::before,
+.custom-loader::after {
+   content:"";
+   grid-area: 1/1;
+   margin:15%;
+   border-radius: 50%;
+   background:inherit;
+   animation:inherit;
+}
+.custom-loader::after {
+   margin:25%;
+   animation-duration: 3s;
+}
+
+@keyframes s2 {
+  100% {transform: rotate(1turn)}
+}
+.llod{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pas{
+  color: white;
+}
