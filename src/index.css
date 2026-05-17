@@ -410,7 +410,10 @@ nav ul li a:not(.active):hover{
 }
 @media(min-width:290px) and (max-width:449px){
   .video-container{
-    min-height: 28rem;
+    min-height: 35rem;
+  }
+  .bg-video{
+    min-height: 35rem;
   }
   .content{
     padding-top: 2rem;
@@ -419,19 +422,19 @@ nav ul li a:not(.active):hover{
     width: 14rem;
   }
   .hh{
-    font-size: 3rem;
+    font-size: 3.7rem;
     margin-top: 10px;
   }
   .sub{
     margin-top: 9px;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
   }
   .subm{
-    font-size: 1rem;
-    margin-top: 10px;
+    font-size: 1.4rem;
+    margin-top: 15px;
   }
   .hed{
-    font-size: 2.5rem;
+    font-size: 4rem;
   }
 }
 .about-card{
