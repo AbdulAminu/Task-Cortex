@@ -7,23 +7,23 @@ export function LogOutBtn() {
   const navigate = useNavigate();
 
   async function handleLogout() {
-    try {
-      const response = await api.get("/users/logout");
+  try {
+    const response = await api.post("/users/logout"); 
+    toast.success(response.data.message);
+    setTimeout(() => {
+      navigate("/login");
+    }, 800);
 
-      toast.success(response.data.message);
-setTimeout(()=>{
-  navigate("/login");
-}, 800)
-      
-    } catch (err) {
-      if (err.response) {
-        toast.error(err.response.data.message);
-      } else {
-        toast.error("Something went wrong");
-      }
+  } catch (err) {
+    if (err.response) {
+      toast.error(err.response.data.message);
+    } else {
+      toast.error("Something went wrong");
     }
+  } finally {
+    localStorage.removeItem("token"); 
   }
-
+}
   return (
     <div className="lg">
         <ToastContainer/>
