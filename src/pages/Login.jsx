@@ -26,10 +26,11 @@ export function Login() {
       [name]: value,
     }));
   };
-localStorage.removeItem("token");
+
   const handleSubmit = async (event) => {
     event.preventDefault();
     setLoading(true);
+    localStorage.removeItem("token");
 
     try {
       const response = await api.post("/users/Login", formData);
