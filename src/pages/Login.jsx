@@ -26,7 +26,7 @@ export function Login() {
       [name]: value,
     }));
   };
-
+localStorage.removeItem("token");
   const handleSubmit = async (event) => {
     event.preventDefault();
     setLoading(true);
