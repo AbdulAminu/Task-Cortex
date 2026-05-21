@@ -1,6 +1,6 @@
 import { useState } from "react";
 import lg from "../assets/lg.png";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { api } from "../API/api";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -9,6 +9,7 @@ import { FaEyeSlash } from "react-icons/fa6";
 import  Loader  from "../components/Loader";
 
 export function SignUp() {
+  const navigate = useNavigate()
     const [Loading, setLoading]= useState(false)
     const [showPassword, setShowPassword]=useState(false)
   const [formData, setFormData] = useState({
@@ -42,6 +43,9 @@ export function SignUp() {
           password: "",
         });
       }
+     setTimeout(()=>{
+      navigate("/")
+     }, 1200)
     } catch (err) {
       if (err.response) {
         toast.error(err.response.data.message);
